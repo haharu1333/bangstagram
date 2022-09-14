@@ -8,11 +8,6 @@
   <link href="styles/common.css" rel="stylesheet" type="text/css" />
   <link href="styles/nav.css" rel="stylesheet" type="text/css" />
   <link href="styles/body.css" rel="stylesheet" type="text/css" />
-
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<script src="js/data.js"></script>
 </head>
 
 <script>
@@ -20,20 +15,6 @@
   document.getElementById("b_user").innerHTML=User
   </script>
 
-  <script>
-
-  	$(function () {	//화면 로딩후 시작
-  		$("#searchInput").autocomplete({  //오토 컴플릿트 시작
-  			source: List,	// source는 data.js파일 내부의 List 배열
-  			focus : function(event, ui) { // 방향키로 자동완성단어 선택 가능하게 만들어줌
-  				return false;
-  			},
-  			minLength: 1,// 최소 글자수
-  			delay: 100,	//autocomplete 딜레이 시간(ms)
-  			//disabled: true, //자동완성 기능 끄기
-  		});
-  	});
-  </script>
 
 
 <body>
@@ -49,7 +30,12 @@
       </div>
     </div>
     <span class="seach_box">
-      <input id="searchInput" type="search" class="search" placeholder="검색" />
+      <input type="search" class="search" placeholder="찾아가기" list="search_list"/>
+
+      <datalist id="search_list">
+        <option value="방선혁"></option>
+      </datalist>
+
       <div class="magnifier_box">
         <!--<img class="magnifier" src="img/magnifier.png" alt="검색버튼">-->
       </div>
