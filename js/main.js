@@ -58,12 +58,12 @@ function colorChange() {
   }
 }
 
-
-function changeImage(){
+//안되니까 일단 지워두자
+/*function changeImage(){
   if (document.getElementById('Heart') == "img/heart.png"){
     document.getElementById('Heart').src = "img/heart_full.png";
   }
   else{
     document.getElementById('Heart').src = "img/heart.png";
   }
-}
+}*/
