@@ -12,7 +12,7 @@ function clickButton() {
   commentBox.className = "newCommentBox";
   commentBox.innerHTML = textBox.value;
   profileId.className = "newCommentBox1";
-  profileId.innerHTML = "s_sewon";
+  profileId.innerHTML = "<b>방선혁 갤러리</b>";
 
   if (textBox.value !== "" && textBox.value.trim() !== "") {
     feedComment.appendChild(profileId) +
@@ -33,7 +33,7 @@ function enter(e) {
   const textBoxTrim = textBox.value.trim();
   profileId1.className = "newCommentBox1";
   commentBox.className = "newCommentBox";
-  profileId1.innerHTML = "ra_ru";
+  profileId1.innerHTML = "<b> 방선혁 갤러리 </b>";
   commentBox.innerHTML = textBox.value;
 
   if (
@@ -55,5 +55,15 @@ function colorChange() {
     summitButtonClick.style.color = "#0095F6";
   } else if (textBox.value.trim() == "") {
     return (summitButtonClick.style.color = "#C0E0FD");
+  }
+}
+
+
+function changeImage(){
+  if (document.getElementById('Heart') == "img/heart.png"){
+    document.getElementById('Heart').src = "img/heart_full.png";
+  }
+  else{
+    document.getElementById('Heart').src = "img/heart.png";
   }
 }
